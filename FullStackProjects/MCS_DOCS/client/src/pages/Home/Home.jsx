@@ -8,7 +8,7 @@ const Home = () => {
     <div>
       <Navbar />
       <LandingPage />
-      <JoinUs/>
+      {/* <JoinUs/> */}
     </div>
   );
 };
