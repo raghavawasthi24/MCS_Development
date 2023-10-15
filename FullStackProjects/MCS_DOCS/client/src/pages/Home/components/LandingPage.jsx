@@ -1,7 +1,7 @@
 import { Button, OutlinedInput, TextField } from '@mui/material'
 import React from 'react'
 import LeftImg from "../../../assets/Left.png"
-import BackgroungImg from "../../../assets/Bg.png";
+import BackgroungImg from "../../../assets/bg.png";
 import CuttingVector from "../../../assets/Vector.png";
 
 const LandingPage = () => {
