@@ -5,6 +5,7 @@ import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import { Button } from "@mui/material";
 import DetailsImg from "../../assets/detailsImg.png";
 import { useSelector } from "react-redux";
+import Footer from "../../components/Footer";
 
 const About = () => {
     const recommended=[
@@ -134,7 +135,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="w-[80%] mx-auto">
+      <div className="w-[80%] mx-auto my-10">
         <p className="font-bold text-[2rem] my-10">Recommended for you</p>
         <div className="flex gap-4 flex-wrap">
             {
@@ -158,6 +159,7 @@ const About = () => {
             }
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };
