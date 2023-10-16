@@ -260,18 +260,37 @@ const initialState = {
         "benefits": ["Strategic financial guidance", "Efficient restructuring"]
       }
     }
-  ]
+  ],
+  currentIndex:0,
+  variedCAList:[],
+  currentCA:""
 };
 
 const PersonSlice = createSlice({
   name: "person",
   initialState,
   reducers: {
-    toggleEditOpt: (state) => {
-     console.log("yeee")
+    searchingCA: (state,action) => {
+     console.log("yeee");
+     console.log(action.payload)
+     state.variedCAList = state.caList.filter((ca)=>
+            ca.name.toLowerCase()===action.payload.toLowerCase()
+          );
+          console.log(state.variedCAList[0])
+
     },
+    fetchingCAList:(state,action)=>{
+           console.log(action.payload)
+           state.variedCAList = state.caList.filter((ca)=>
+            ca.name.toLowerCase().includes(action.payload.toLowerCase())
+          );
+    },
+    currentCAFetch:(state,action)=>{
+      console.log(action.payload)
+       state.currentCA=action.payload
+    }
   },
 });
 
 export default PersonSlice.reducer;
-export const { toggleEditOpt } = PersonSlice.actions;
+export const { searchingCA,fetchingCAList,currentCAFetch } = PersonSlice.actions;
