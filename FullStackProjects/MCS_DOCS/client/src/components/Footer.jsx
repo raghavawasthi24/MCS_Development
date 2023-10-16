@@ -14,7 +14,7 @@ const Footer = () => {
                     <img src={Logo} alt="" />
                     <p>India's first platform dedicated to simplifying partner search</p>
                 </div>
-                <div className=' flex-col xs:flex-row justify-between gap-6 lg:gap-10 flex-wrap md:flex-nowrap'>
+                <div className=' flex  md:justify-between gap-6 lg:gap-10 flex-wrap md:flex-nowrap'>
                     <ul className='flex flex-col gap-2'>
                         <li className='font-bold'>COMPANY</li>
                         <li>About</li>
@@ -48,7 +48,7 @@ const Footer = () => {
             </div>
             <hr />
 
-            <div className='flex justify-between w-[90%] mx-auto p-4'>
+            <div className='flex flex-col sm:flex-row gap-4 justify-between w-[90%] mx-auto p-4'>
                 <p>Sambhaji Nagar, No2, St. Antony Road, Chembur, Mumbai - 400071, Maharashtra</p>
                 <div className='flex gap-4'>
                     <FacebookIcon/>
@@ -60,7 +60,7 @@ const Footer = () => {
             </div>
 
         </div>
-        <div className='bg-black text-white text-center py-2'>
+        <div className='bg-black text-white text-center p-2 text-sm'>
         Registered trademark of India Private Limited © 2023 loerumipsum Inc. All Rights Reserved
         </div>
     </div>

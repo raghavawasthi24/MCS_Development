@@ -40,7 +40,24 @@ function Navbar() {
     <AppBar position="fixed" sx={{top:"0" , backgroundColor:"transparent",color:"black", boxShadow:"none"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <img src={Logo} alt="" />
+          
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="#app-bar-with-responsive-menu"
+            sx={{
+              mr: 2,
+              display: { xs: 'none', md: 'flex' },
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          >
+            <img src={Logo} alt=""/>
+          </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -77,7 +94,7 @@ function Navbar() {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          
           <Typography
             variant="h5"
             noWrap
@@ -94,7 +111,7 @@ function Navbar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            <img src={Logo} alt=""/>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' },marginLeft:"4rem" }}>
             {pages.map((page) => (
