@@ -20,6 +20,16 @@ const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [colorChange, setColorchange] = React.useState(false);
+  const changeNavbarColor = () => {
+      if (window.scrollY >= 80) {
+          setColorchange(true)
+      }
+      else {
+          setColorchange(false);
+      }
+  };
+  window.addEventListener('scroll', changeNavbarColor);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -36,8 +46,10 @@ function Navbar() {
     setAnchorElUser(null);
   };
 
+
+
   return (
-    <AppBar position="fixed" sx={{top:"0" , backgroundColor:"transparent",color:"black", boxShadow:"none"}}>
+    <AppBar position="fixed" sx={{top:"0" ,color:"black", boxShadow:"none", backgroundColor:colorChange?"white":"transparent"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           
