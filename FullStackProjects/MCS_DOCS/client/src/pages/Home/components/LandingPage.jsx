@@ -48,7 +48,7 @@ const LandingPage = () => {
       </div>
       <div className="w-full md:w-[60%] flex flex-col justify-center px-6 gap-6 lg:gap-10 mt-14 p-6">
         <p className="text-[2rem] sm:text-[3rem] lg:text-[4rem] font-bold leading-tight">
-          Find Partners (CAs) available online
+          Find <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0076CE] to-[#9400D3]">Partners</span> (CAs) available online
         </p>
         <p className="text-gray-500">
           <span className="font-bold">CONNECT</span> with us where your services
@@ -56,11 +56,11 @@ const LandingPage = () => {
           compliance support
         </p>
         <div className="w-full relative">
-          <div className="flex items-center">
+          <div className="w-full flex items-center">
             <OutlinedInput
               placeholder="Search by name"
               sx={{
-                width: "20rem",
+                width:"20rem",
                 height: "3rem",
                 borderRadius: "0",
                 border: "none",
@@ -76,7 +76,7 @@ const LandingPage = () => {
               Search
             </Button>
           </div>
-          <div className={`${hide ? "hidden" : "absolute top-[3rem] w-full bg-white z-40"}`}>
+          <div className={`${hide ? "hidden" : "absolute top-[3rem] w-full xs:min-w-[30rem] sm:w-[30rem] md:w-full lg:w-[30rem] bg-white z-40"}`}>
             {CAList?.map((item) => {
               console.log(CAList);
               return (

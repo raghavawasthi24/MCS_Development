@@ -59,7 +59,7 @@ const JoinUs = () => {
   return (
     <div className='flex flex-col items-center relative mt-10'>
         <img src={AboutBg} className='absolute top-0 w-full h-full -z-10'/>
-        <p className='text-[2rem] sm:text-[3rem] lg:text-[4rem] font-bold'>Want to Join Us?</p>
+        <p className='text-[2rem] sm:text-[3rem] lg:text-[4rem] font-bold'>Want to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0076CE] to-[#9400D3]">Join</span> Us?</p>
         <p className='text-center'>To remain with us, it is essential that you diligently follow the steps provided</p>
         <div className="flex flex-wrap w-[95%] mx-auto my-10">
             {
